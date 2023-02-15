@@ -1,0 +1,924 @@
+<% var data = {
+
+  title: 'Ёлы-Палы',
+  status: true
+
+} %>
+
+<%= _.template(require('./includes/header.html').default)({data}) %>
+
+<!-- Главный блок -->
+
+<main class="main container relative overflow-hidden">
+  <div class="blur absolute bg-brown zi-1"></div>
+  <div class="bg-block">
+    <div class="pack h-100">
+      <picture>
+        <source srcset="img/pictures/group.webp" type="image/webp">
+        <img class="image image--sd image--br" src="img/pictures/group.png" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="relative color-white zi-2">
+    <h1 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-3 mb-md-5 md-lg-9 ease duration-5 anim anim--up" data-anim="hidden">
+      профессиональная <br>кавер-группа
+    </h1>
+    <h3 class="text text--center text-14 text-md-16 bold-4 ease delay-2 anim anim--up" data-anim="hidden">Лучшие хиты в исполнении виртуозов <br class="d-block d-md-none"> в своём деле</h3>
+  </div>
+</main>
+
+<!-- Квиз -->
+
+<section class="quiz container overflow-hidden py-0">
+  <form class="quiz__form form flex-row align-center justify-between gap-0 gap-lg-10 color-white radius-main py-8 px-6 px-lg-8 ease duration-5 anim anim--left" data-anim="hidden" data-form="submit">
+    <div class="quiz-slider flex flex-column gap-6 gap-md-10 w-100 h-100 pl-lg-8" data-quiz="stop">
+      <div class="swiper swiper--overwrap">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide h-100" data-quiz-slide>
+            <h3 class="text-14 text-md-16 bold-4 mb-2">Хотите пригласить нашу группу?</h3>
+            <h2 class="font-alt text text--uppercase text-18 text-md-24 bold-9 lh-4 mb-8 mb-md-10">1. выберите мероприятие</h2>
+            <div class="grid gap-4 gap-md-6">
+              <label class="col-6 form-label">
+                <input class="quiz__radio d-none" type="radio" name="radio">
+                <span class="quiz__btn btn btn--white btn--lg btn--contur font-alt text text--center text--uppercase text-12 text-md-16 bold-7 px-2 px-md-5">Корпоратив</span>
+              </label>
+              <label class="col-6 form-label">
+                <input class="quiz__radio d-none" type="radio" name="radio">
+                <span class="quiz__btn btn btn--white btn--lg btn--contur font-alt text text--center text--uppercase text-12 text-md-16 bold-7 px-2 px-md-5">свадьба</span>
+              </label>
+              <label class="col-6 form-label">
+                <input class="quiz__radio d-none" type="radio" name="radio">
+                <span class="quiz__btn btn btn--white btn--lg btn--contur font-alt text text--center text--uppercase text-12 text-md-16 bold-7 px-2 px-md-5">день рождения</span>
+              </label>
+              <label class="col-6 form-label">
+                <input class="quiz__radio d-none" type="radio" name="radio">
+                <span class="quiz__btn btn btn--white btn--lg btn--contur font-alt text text--center text--uppercase text-12 text-md-16 bold-7 px-2 px-md-5">фестиваль</span>
+              </label>
+              <label class="col-6 form-label">
+                <input class="quiz__radio d-none" type="radio" name="radio">
+                <span class="quiz__btn btn btn--white btn--lg btn--contur font-alt text text--center text--uppercase text-12 text-md-16 bold-7 px-2 px-md-5">юбилей</span>
+              </label>
+              <label class="col-6 form-label">
+                <input class="quiz__radio d-none" type="radio" name="radio">
+                <span class="quiz__btn btn btn--white btn--lg btn--contur font-alt text text--center text--uppercase text-12 text-md-16 bold-7 px-2 px-md-5">другое</span>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide h-100" data-quiz-slide>
+            <h3 class="text-14 text-md-16 bold-4 mb-2">Напишите нам</h3>
+            <h2 class="font-alt text text--uppercase text-18 text-md-24 bold-9 lh-4 mb-8 mb-md-10">2. Мы перезвоним и расскажем о себе больше</h2>
+            <input type="hidden" value="Главная" name="theme">
+            <label class="form-label mb-4 mb-6" data-label="input">
+              <span class="text-16 bold-5 mb-2">Ваш телефон</span>
+              <div class="form-wrapper">
+                <div class="input-cover">
+                  <input class="input" data-input="tel" type="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" name="tel">
+                </div>
+                <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
+              </div>
+            </label>
+            <label class="form-label mb-8 mb-md-10" data-label="input">
+              <span class="text-16 bold-5 mb-2">Ваше имя</span>
+              <div class="form-wrapper">
+                <div class="input-cover">
+                  <input class="input" data-input="name" type="text" name="name">
+                </div>
+                <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваше имя!</span>
+              </div>
+            </label>
+            <button class="btn btn--white btn--lg btn--contur btn--swipe overflow-hidden w-max px-8" data-waved type="submit">Отправить заявку</button>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-slider-bottom flex align-center gap-4 fade-100 mt-auto duration-2">
+        <button class="quiz-slider__btn swiper-button-prev default btn btn--white btn--lg btn--contur mt-0 px-7 px-md-10" data-waved>
+          <svg class="icon text-24">
+            <use xlink:href="img/icons.svg#to-left">
+          </svg>
+        </button>
+        <button class="quiz-slider__btn swiper-button-next default btn btn--primary btn--lg btn--fill color-text text-14 text-md-16 w-auto mt-0" data-waved>Следующий вопрос</button>
+      </div>
+    </div>
+    <div class="quiz-images d-none d-lg-block w-100">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide quiz__pack pack pack--box bg-black radius-main">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/quiz-1.webp" type="image/webp">
+              <img class="image image--rise" loading="lazy" src="img/pictures/quiz-1.jpg" alt="">
+            </picture>
+          </div>
+          <div class="swiper-slide quiz__pack pack pack--box bg-black radius-main">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/quiz-2.webp" type="image/webp">
+              <img class="image image--rise" loading="lazy" src="img/pictures/quiz-2.jpg" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- Концерт -->
+
+<section class="concert container relative overflow-hidden pt-0 pb-lg-0" id="concert">
+  <div class="concert__tree-red parallax-top absolute zi-1 color-red text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="1.5">
+    <svg class="icon">
+      <use xlink:href="img/icons.svg#tree">
+    </svg>
+  </div>
+  <div class="concert__tree-yellow parallax-top d-none d-md-block absolute zi-1 color-yellow text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="5">
+    <svg class="icon">
+      <use xlink:href="img/icons.svg#tree">
+    </svg>
+  </div>
+  <div class="concert__burger parallax-bottom absolute zi-1 color-green text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="4">
+    <svg class="icon">
+      <use xlink:href="img/icons.svg#burger">
+    </svg>
+  </div>
+  <div class="concert__block flex align-center justify-between gap-lg-10 color-white">
+    <div class="concert__pack pack pack--box w-100 ease duration-6 anim anim--right" data-anim="hidden">
+      <picture>
+        <source srcset="img/pictures/concert.webp" type="image/webp">
+        <img class="image image--sd" src="img/pictures/concert.png" alt="">
+      </picture>
+    </div>
+    <div class="relative ease duration-2 anim anim--left" data-anim="hidden">
+      <div class="concert__blur absolute bg-brown"></div>
+      <div class="relative">
+        <h2 class="font-alt text text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-3 mb-3 mb-md-4 md-lg-8 ease duration-4 delay-2 anim anim--up" data-anim="hidden">
+          заж <img class="concert__fire icon d-inline" src="img/pictures/fire.svg" alt=""> гем <br class="d-none d-lg-block"> для вас!
+        </h2>
+        <h3 class="text-14 text-md-16 bold-4 lh-5 mb-8 mb-md-10 ease duration-4 delay-2 anim anim--up" data-anim="hidden">
+          Кавер-группа, после которой гости не захотят <br class="d-none d-lg-block">
+          уходить с праздника. Даже те, кто очень спешил <br class="d-none d-lg-block">
+          домой в начале вечеринки, тоже передумают.
+        </h3>
+        <div class="ease duration-4 delay-2 anim anim--up" data-anim="hidden">
+          <button class="btn btn--white btn--lg btn--contur btn--swipe overflow-hidden" data-waved data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-feedback.html">Пригласить группу</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Мероприятия -->
+
+<section class="events container relative overflow-hidden pt-0 px-0">
+  <div class="events-slider relative pointer-none">
+    <div class="swiper">
+      <div class="events-wrapper swiper-wrapper">
+        <div class="swiper-slide w-max">
+          <div class="events__item color-yellow text-26 text-md-36">
+            <svg class="icon zoom-2">
+              <use xlink:href="img/icons.svg#star">
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item events__item--name flex align-center justify-center color-black bg-red font-alt text text--center text--uppercase text-14 text-md-24 bold-7 px-10">дни рождения</div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item color-primary text-26 text-md-36">
+            <svg class="icon zoom-2">
+              <use xlink:href="img/icons.svg#lightning">
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item events__item--name events__item--akva flex align-center justify-center color-akva bg-red font-alt text text--center text--uppercase text-14 text-md-24 bold-7 px-10">свадьбы</div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item color-akva text-26 text-md-36 fade-20">
+            <svg class="icon zoom-2">
+              <use xlink:href="img/icons.svg#star">
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item events__item--name flex align-center justify-center color-black bg-primary font-alt text text--center text--uppercase text-14 text-md-24 bold-7 px-10">Корпоративы</div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item color-green text-26 text-md-36">
+            <svg class="icon zoom-2">
+              <use xlink:href="img/icons.svg#lightning">
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item events__item--name events__item--green flex align-center justify-center color-green bg-red font-alt text text--center text--uppercase text-14 text-md-24 bold-7 px-10">фестивали</div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item color-pink text-26 text-md-36 fade-20">
+            <svg class="icon zoom-2">
+              <use xlink:href="img/icons.svg#tree">
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item events__item--name flex align-center justify-center color-black bg-pink font-alt text text--center text--uppercase text-14 text-md-24 bold-7 px-10">юбилеи</div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item color-primary text-26 text-md-36 fade-80">
+            <svg class="icon zoom-2">
+              <use xlink:href="img/icons.svg#lightning">
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide w-max">
+          <div class="events__item events__item--name events__item events__item--pink flex align-center justify-center color-pink bg-red font-alt text text--center text--uppercase text-14 text-md-24 bold-7 px-10">дни города</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Репертуар -->
+
+<% var repertoire = [
+  {
+    img: '1',
+    title: 'Дискотека Авария'
+  },
+  {
+    img: '2',
+    title: 'руки вверх!'
+  },
+  {
+    img: '3',
+    title: 'Мумий Тролль'
+  },
+  {
+    img: '1',
+    title: 'Дискотека Авария'
+  },
+  {
+    img: '2',
+    title: 'руки вверх!'
+  },
+  {
+    img: '3',
+    title: 'Мумий Тролль'
+  }
+] %>
+
+<section class="repertoire container gradient gradient--light bg-white overflow-hidden" id="repertoire">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">
+    что мы 
+    <span class="relative zi-1 color-primary text-20 text-md-42">
+      <svg class="repertoire__icon icon d-inline zoom-2">
+        <use xlink:href="img/icons.svg#logo">
+      </svg>
+    </span>
+    сполняем!
+  </h2>
+  <div class="repertoire-slider relative mb-8 mb-md-10">
+    <div class="swiper swiper--overwrap overflow-visible">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < repertoire.length; i++) { %>
+          <div class="swiper-slide repertoire__card card align-center justify-center border pointer h-100 p-5 p-md-10" data-waved>
+            <div class="repertoire__img repertoire__img--1 absolute zi-1 color-pink text-40 fade-0 hidden pointer-none linear duration-2">
+              <svg class="icon">
+                <use xlink:href="img/icons.svg#tree">
+              </svg>
+            </div>
+            <div class="repertoire__img repertoire__img--2 absolute zi-1 color-green text-32 fade-0 hidden pointer-none linear duration-2">
+              <svg class="icon zoom-2">
+                <use xlink:href="img/icons.svg#lightning">
+              </svg>
+            </div>
+            <div class="repertoire__pack pack pack--box bg-grey radius-max w-100">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/record-<%= repertoire[i].img %>.webp" type="image/webp">
+                <img class="image image--sd" loading="lazy" src="img/pictures/record-<%= repertoire[i].img %>.png" alt="">
+              </picture>
+            </div>
+            <div class="repertoire__content card-content relative bg-white py-5 px-5 px-md-10">
+              <h4 class="font-alt text text--center text--uppercase text-18 text-md-24 bold-7 mb-2 mb-md-3"><%= repertoire[i].title %></h4>
+              <p class="text text--center text-14 text-md-16 bold-4 lh-2 fade-60">Любимые хиты 90-ых и 00-ых</p>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <button class="swiper-button-prev btn btn--text btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-left">
+      </svg>
+    </button>
+    <button class="swiper-button-next btn btn--text btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-right">
+      </svg>
+    </button>
+  </div>
+  <div class="ease duration-4 anim anim--up" data-anim="hidden">
+    <button class="btn btn--text btn--lg btn--contur btn--swipe overflow-hidden px-md-10 mx-auto" data-waved>Получить файл с репертуаром</button>
+  </div>
+</section>
+
+<!-- Клипы -->
+
+<% var clips = ['1', '2', '1', '2', '1', '2'] %>
+
+<section class="clips container gradient gradient--light bg-white overflow-hidden pt-0">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">как мы это делаем</h2>
+  <div class="clips-slider relative">
+    <div class="swiper swiper--overwrap overflow-visible">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < clips.length; i++) { %>
+          <a class="swiper-slide clips__card card link-wrapper h-100" data-fancybox href="img/pictures/clip-<%= clips[i] %>.png">
+            <div class="pack pack--rect bg-grey radius-main w-100">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/clip-<%= clips[i] %>.webp" type="image/webp">
+                <img class="image image--rise" loading="lazy" src="img/pictures/clip-<%= clips[i] %>.png" alt="">
+              </picture>
+              <div class="clips__play flex align-center justify-center absolute pointer-none">
+                <span class="clips__btn btn btn--primary btn--light text-26 text-md-28 text-lg-34 radius-max pointer-all" data-waved>
+                  <svg class="icon zoom-2">
+                    <use xlink:href="img/icons.svg#play">
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="card-content py-4">
+              <h4 class="link font-alt text text--uppercase text-18 text-md-24 bold-7 mb-2">Måneskin - Beggin</h4>
+              <p class="text-14 text-md-16 bold-4 lh-2 fade-60">Кавер на песню</p>
+            </div>
+          </a>
+        <% } %>
+      </div>
+    </div>
+    <button class="swiper-button-prev btn btn--text btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-left">
+      </svg>
+    </button>
+    <button class="swiper-button-next btn btn--text btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-right">
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- Преимущества -->
+
+<section class="advantages container container--sm relative overflow-hidden" id="advantages">
+  <div class="blur absolute bg-brown zi-1"></div>
+  <div class="advantages__musician pack pack--photo d-none d-lg-block absolute zi-2 pointer-none w-100 ease duration-6 anim anim--right" data-anim="hidden">
+    <picture>
+      <source srcset="img/pictures/musician.webp" type="image/webp">
+      <img class="image image--sd" src="img/pictures/musician.png" alt="">
+    </picture>
+  </div>
+  <div class="advantages__content relative zi-1 color-white w-100 ml-auto">
+    <h2 class="advantages__title font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">
+      чем Мы оТЛИЧАЕМСЯ <br class="d-none d-md-block">от других
+    </h2>
+    <div class="d-flex flex-column d-md-grid grid grid--rows gap-4 gap-md-8">
+      <div class="order-2 order-md-1 col-5 row-7 ease duration-4 anim anim--up" data-anim="hidden">
+        <div class="advantages__item advantages__item--1 flex flex-column radius-main h-100 py-10 px-10 px-md-8">
+          <h4 class="font-alt text-18 text-md-24 bold-7 lh-3">
+            Чистый <br>
+            качественный <br>
+            звук
+          </h4>
+          <div class="advantages__record pack pack--box bg-black radius-max w-100 mt-auto ml-auto">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/record.webp" type="image/webp">
+              <img class="image image--sd" loading="lazy" src="img/pictures/record.png" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="order-1 order-md-2 col-7 row-3 ease duration-4 anim anim--up" data-anim="hidden">
+        <div class="advantages__item advantages__item--2 flex align-center relative border radius-main h-100 py-8 px-8 px-md-10">
+          <h4 class="font-alt text-18 text-md-24 bold-7 lh-3">
+            Своя <br>аппаратура
+          </h4>
+          <div class="advantages__microphone pack pack--box absolute w-100">
+            <picture>
+              <source srcset="img/pictures/microphone.webp" type="image/webp">
+              <img class="image image--sd" src="img/pictures/microphone.png" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="order-3 order-md-3 col-7 row-5 ease duration-4 anim anim--up" data-anim="hidden">
+        <div class="advantages__item advantages__item--3 relative radius-main overflow-hidden h-100 py-10 px-10 px-md-8">
+          <div class="bg-block pointer-none">
+            <div class="pack w-100 h-100">
+              <picture>
+                <source srcset="img/pictures/map.webp" type="image/webp">
+                <img class="image" src="img/pictures/map.jpg" alt="">
+              </picture>
+            </div>
+          </div>
+          <h4 class="font-alt relative text-18 text-md-24 bold-7 lh-3">
+            Работаем <br>по всей стране
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Команда -->
+
+<% var team = [
+  {
+    img: '1',
+    name: 'михаил',
+    text: 'Главный на бас-гитаре',
+    bg: 'primary',
+    color: 'text'
+  },
+  {
+    img: '2',
+    name: 'михаил',
+    text: 'Виртуоз на гитаре вокале',
+    bg: 'green',
+    color: 'text'
+  },
+  {
+    img: '3',
+    name: 'михаил',
+    text: 'Родился с бас-гитарой в руках',
+    bg: 'purple',
+    color: 'white'
+  },
+  {
+    img: '4',
+    name: 'михаил',
+    text: 'Поёт как соловей',
+    bg: 'sky',
+    color: 'text'
+  },
+  {
+    img: '5',
+    name: 'михаил',
+    text: 'Соседи (больше) не жалуются',
+    bg: 'red',
+    color: 'white'
+  },
+  {
+    img: '6',
+    name: 'михаил',
+    text: 'Любит дуть и всем это нравится',
+    bg: 'akva',
+    color: 'text'
+  },
+  {
+    img: '7',
+    name: 'михаил',
+    text: 'Человек с железными легкими',
+    bg: 'blue',
+    color: 'white'
+  }
+] %>
+
+<section class="team container bg-white overflow-hidden" id="team">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">
+    наша к
+    <span class="relative zi-1 text-18 text-md-40">
+      <svg class="team__icon icon d-inline zoom-2">
+        <use xlink:href="img/icons.svg#logo">
+      </svg>
+    </span>
+    манда
+  </h2>
+  <div class="team-slider">
+    <div class="swiper swiper--overwrap">
+      <div class="team-wrapper swiper-wrapper d-flex d-lg-grid grid gap-lg-8">
+        <% for (var i = 0; i < team.length; i++) { %>
+          <div class="swiper-slide <%= i == 3 ? 'col-12' : 'col-4' %>">
+            <div class="team__card card flex-row align-center color-white ease-in-out duration-4 anim anim--up" data-anim="hidden">
+              <div class="team__person relative w-100">
+                <div class="team__pack pack pack--photo bg-text w-100">
+                  <div class="loader">
+                    <span class="loader-progress">
+                      <svg class="loader-icon icon">
+                        <use xlink:href="img/icons.svg#loader">
+                      </svg>
+                    </span>
+                  </div>
+                  <picture>
+                    <source srcset="img/pictures/person-<%= team[i].img %>.webp" type="image/webp">
+                    <img class="image <%= i == 3 ? 'image--br' : '' %>" loading="lazy" src="img/pictures/person-<%= team[i].img %>.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="team__bg team__bg--<%= team[i].bg %> bg-block zi-1 flex flex-column align-center justify-center py-4 px-5 py-md-8 px-md-8">
+                  <h4 class="relative font-alt text text--center text--uppercase text-18 text-md-24 bold-7 mt-auto mb-2 mb-md-3"><%= team[i].name %></h4>
+                  <div class="team__info team__info--<%= team[i].bg %> flex align-center justify-center relative color-<%= team[i].color %> text text--center text-14 text-md-16 bold-6 w-100 px-4"><%= team[i].text %></div>
+                </div>
+              </div>
+              <% if (i == 3) { %>
+                <div class="team__content card-content d-none d-lg-flex relative pl-10 pr-5">
+                  <div class="team__logo absolute text-46">
+                    <span class="color-white fade-10 zoom-4">
+                      <svg class="icon zoom-2">
+                        <use xlink:href="img/icons.svg#logo">
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="relative">
+                    <h3 class="font-alt text text--uppercase text-24 bold-7 mb-6">мы собрали лучших</h3>
+                    <p class="text-16 bold-4 lh-5 fade-80 mb-5">
+                      Мы музыкальная, танцевальная шоу-кавер-группа, обладая <br>
+                      разнообразным репертуаром мы наносим скуке и формальности <br>
+                      встреч непоправимые удары с 2015 года!
+                    </p>
+                    <p class="text-16 bold-4 lh-5 fade-80">
+                      Мощный и качественный звук, сопровождающий профессиональных <br>
+                      музыкантов, способен пробить даже самое угрюмое настроение, <br>
+                      а наш специальный концертный менеджер проработает все вопросы <br>
+                      по репертуару, времени, транспорту, тех.райдеру и прочей рутине
+                    </p>
+                  </div>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        <% } %>
+      </div>
+      <div class="swiper-pagination d-flex d-lg-none color-primary mt-5 mt-md-10"></div>
+    </div>
+  </div>
+  <div class="d-block d-lg-none relative color-white bg-text radius-main py-10 px-4 px-md-8 mt-5 mt-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <div class="team__logo absolute text-26 text-md-46">
+      <span class="color-white fade-10 zoom-4">
+        <svg class="icon zoom-2">
+          <use xlink:href="img/icons.svg#logo">
+        </svg>
+      </span>
+    </div>
+    <div class="relative">
+      <h3 class="font-alt text text--uppercase text-18 bold-7 mb-4">мы собрали лучших</h3>
+      <p class="text-14 bold-4 lh-5 fade-80 mb-5">
+        Мы музыкальная, танцевальная шоу-кавер-группа, обладая <br class="d-none d-md-block">
+        разнообразным репертуаром мы наносим скуке и формальности <br class="d-none d-md-block">
+        встреч непоправимые удары с 2015 года!
+      </p>
+      <p class="text-14 bold-4 lh-5 fade-80">
+        Мощный и качественный звук, сопровождающий профессиональных <br class="d-none d-md-block">
+        музыкантов, способен пробить даже самое угрюмое настроение, <br class="d-none d-md-block">
+        а наш специальный концертный менеджер проработает все вопросы <br class="d-none d-md-block">
+        по репертуару, времени, транспорту, тех.райдеру и прочей рутине
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Приглашение -->
+
+<% var invitation = [
+  {
+    title: 'Заполните заявку',
+    text: 'Мы перезвоним вам, чтобы уточнить <br class="d-block d-md-none"> дату мероприятия'
+  },
+  {
+    title: 'Уточняем все детали',
+    text: 'Что за мероприятие вам нужно <br class="d-block d-md-none"> и с каким репертуаром'
+  },
+  {
+    title: 'Общаемся лично',
+    text: 'Встречаемся с вами, улаживаем все <br class="d-block d-md-none"> бумажные дела'
+  },
+  {
+    title: 'Встречаемся на мероприятии',
+    text: 'Готовы получать удовольствие? Отлично, <br class="d-block d-md-none"> встретимся на мероприятии'
+  }
+] %>
+
+<section class="invitation container container--sm relative overflow-hidden">
+  <div class="blur absolute bg-brown zi-1"></div>
+  <div class="invitation__star parallax-top absolute zi-1 color-akva text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="1.2">
+    <svg class="icon">
+      <use xlink:href="img/icons.svg#star">
+    </svg>
+  </div>
+  <div class="invitation__tree parallax-bottom absolute zi-1 color-yellow text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="1.5">
+    <svg class="icon">
+      <use xlink:href="img/icons.svg#tree">
+    </svg>
+  </div>
+  <div class="invitation__burger parallax-bottom absolute zi-1 color-green text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="1.4">
+    <svg class="icon">
+      <use xlink:href="img/icons.svg#burger">
+    </svg>
+  </div>
+  <div class="invitation__block flex align-center justify-between gap-lg-4 relative zi-1 color-white w-100 mx-auto">
+    <h2 class="order-1 d-lg-none font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-3 w-100 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">
+      хотите нас <br>
+      пригласить?
+    </h2>
+    <div class="order-3 order-lg-1">
+      <h2 class="d-none d-lg-block font-alt text text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-3 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">
+        хотите нас <br>
+        пригласить?
+      </h2>
+      <div class="flex flex-column gap-7">
+        <% for (var i = 0; i < invitation.length; i++) { %>
+          <div class="flex flex-column ease duration-6 anim anim--right" data-anim="hidden">
+            <div class="flex align-center mb-2">
+              <svg class="icon color-primary text-20 text-md-24 mr-2 mr-md-3">
+                <use xlink:href="img/icons.svg#success">
+              </svg>
+              <h4 class="text-18 text-md-24 bold-7 lh-4"><%= invitation[i].title %></h4>
+            </div>
+            <p class="text-14 text-md-16 bold-5 lh-5 fade-60">
+              <%= invitation[i].text %>
+            </p>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="invitation__feedback order-2 order-lg-2 radius-main w-100 py-10 px-6 px-md-10 mb-8 mb-lg-0 ease duration-6 anim anim--left" data-anim="hidden">
+      <h4 class="font-alt text text--uppercase text-22 text-md-24 bold-9 mb-1 mb-md-3">отправьте заявку</h4>
+      <p class="text-14 text-md-16 bold-5 lh-4 fade-60 mb-8 mb-md-10">Давайте начнем знакомиться!</p>
+      <form class="invitation__form form" data-form="submit">
+        <input type="hidden" value="Главная" name="theme">
+        <label class="form-label mb-4" data-label="input">
+          <span class="text-16 bold-5 mb-2">Ваш телефон</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="tel" type="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" name="tel">
+            </div>
+            <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
+          </div>
+        </label>
+        <label class="form-label mb-8" data-label="input">
+          <span class="text-16 bold-5 mb-2">Ваше имя</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="name" type="text" name="name">
+            </div>
+            <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваше имя!</span>
+          </div>
+        </label>
+        <button class="btn btn--white btn--lg btn--contur btn--swipe overflow-hidden w-max px-8 mb-5" data-waved type="submit">Отправить заявку</button>
+        <div class="link text-12 bold-5 lh-5 fade-40 pointer w-auto w-md-max" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">
+          Отправляя форму, Вы даете согласие на обработку <br class="d-none d-md-block">
+          Ваших персональных данных
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="invitation__bg bg-block">
+    <div class="invitation__pack pack pack--rect w-100 h-100 ml-auto">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </svg>
+        </span>
+      </div>
+      <picture>
+        <source srcset="img/pictures/feedback.webp" type="image/webp">
+        <img class="image image--sd image--br" loading="lazy" src="img/pictures/feedback.png" alt="">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- Вопросы -->
+
+<% var questions = [
+  {
+    status: 'hidden',
+    text: 'Можно ли оплатить по безналичному расчету?'
+  },
+  {
+    status: 'active',
+    text: 'Что делать, если любимых песен нет в репертуаре?'
+  },
+  {
+    status: 'hidden',
+    text: 'Нужен ли звуко-режиссер на мероприятие?'
+  },
+  {
+    status: 'hidden',
+    text: 'Вы приедете ко мне в город?'
+  },
+  {
+    status: 'hidden',
+    text: 'А если не хватило времени и хочется продолжения?'
+  }
+] %>
+
+<section class="questions container bg-white" id="questions">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-3 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">вопрос-ответ</h2>
+  <div class="flex flex-column gap-5 gap-md-7">
+    <% for (var i = 0; i < questions.length; i++) { %>
+      <div class="questions__accordion relative border-bottom pb-5 pb-md-7 ease duration-4 anim anim--up" data-anim="hidden" data-waved data-accordion="<%= questions[i].status %>">
+        <div class="flex align-center justify-between gap-5 pointer link-wrapper" data-accordion-toggle>
+          <div class="flex align-center">
+            <svg class="questions__logo icon d-none d-lg-block color-green text-32 mr-2 ease duration-3">
+              <use xlink:href="img/icons.svg#logo">
+            </svg>
+            <h4 class="link font-alt text-18 text-md-24 bold-7 lh-3"><%= questions[i].text %></h4>
+          </div>
+          <div class="questions__circle flex align-center justify-center color-primary radius-max ease duration-3">
+            <svg class="questions__arrow icon text-16 ease duration-3">
+              <use xlink:href="img/icons.svg#to-left">
+            </svg>
+          </div>
+        </div>
+        <div data-accordion-content>
+          <p class="text-14 text-md-16 bold-4 lh-5 fade-80 mt-4 mt-md-6">
+            Для таких случаев мы придумали услугу – внести до трех выбранных вами песен в свой репертуар совершенно бесплатно. Если их там не будет, конечно же
+          </p>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<!-- Отзывы -->
+
+<section class="reviews container gradient gradient--dark overflow-hidden" id="reviews">
+  <div class="blur absolute bg-brown zi-1"></div>
+  <div class="relative color-white">
+    <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-3 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">мы впечатляем!</h2>
+    <div class="reviews-slider relative pointer-none mb-4 mb-md-8">
+      <div class="swiper overflow-visible">
+        <div class="reviews-wrapper swiper-wrapper">
+          <% for (var i = 0; i < 10; i++) { %>
+            <div class="swiper-slide w-max h-auto">
+              <div class="reviews__card card color-white bg-none w-100 h-100 p-6 p-md-8">
+                <div class="flex align-center justify-between gap-5 mb-8">
+                  <div class="reviews__pack pack pack--box bg-grey radius-max w-100">
+                    <div class="loader">
+                      <span class="loader-progress">
+                        <svg class="loader-icon icon">
+                          <use xlink:href="img/icons.svg#loader">
+                        </svg>
+                      </span>
+                    </div>
+                    <picture>
+                      <source srcset="img/pictures/review.webp" type="image/webp">
+                      <img class="image" loading="lazy" src="img/pictures/review.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="text-42 fade-20">
+                    <svg class="icon zoom-2">
+                      <use xlink:href="img/icons.svg#logo">
+                    </svg>
+                  </div>
+                </div>
+                <h4 class="font-alt text-18 text-md-24 bold-7 lh-4 mb-2 mb-md-3">Елена Огурцова</h4>
+                <p class="text-14 text-md-16 bold-5 lh-4 fade-60">
+                  Эти ребята просто космос!! Наша свадьба запомнится надолго!
+                </p>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-slider relative pointer-none">
+      <div class="swiper overflow-visible" dir="rtl">
+        <div class="reviews-wrapper swiper-wrapper">
+          <% for (var i = 0; i < 10; i++) { %>
+            <div class="swiper-slide w-max h-auto" dir="ltr">
+              <div class="reviews__card card color-white bg-none w-100 h-100 p-6 p-md-8">
+                <div class="flex align-center justify-between gap-5 mb-8">
+                  <div class="reviews__pack pack pack--box bg-grey radius-max w-100">
+                    <div class="loader">
+                      <span class="loader-progress">
+                        <svg class="loader-icon icon">
+                          <use xlink:href="img/icons.svg#loader">
+                        </svg>
+                      </span>
+                    </div>
+                    <picture>
+                      <source srcset="img/pictures/review.webp" type="image/webp">
+                      <img class="image" loading="lazy" src="img/pictures/review.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="text-42 fade-20">
+                    <svg class="icon zoom-2">
+                      <use xlink:href="img/icons.svg#logo">
+                    </svg>
+                  </div>
+                </div>
+                <h4 class="font-alt text-18 text-md-24 bold-7 lh-4 mb-2 mb-md-3">Елена Огурцова</h4>
+                <p class="text-14 text-md-16 bold-5 lh-4 fade-60">
+                  Эти ребята просто космос!! Наша свадьба запомнится надолго!
+                </p>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Знакомство -->
+
+<section class="acquaint container container--sm overflow-hidden pb-0">
+  <div class="acquaint__block flex align-center justify-between bg-white radius-main w-100 mx-auto py-10 px-6 px-md-10 py-lg-6 px-lg-6 ease duration-4 anim anim--left" data-anim="hidden">
+    <div class="acquaint__feedback w-100 px-lg-10">
+      <h2 class="font-alt text text--uppercase text-22 text-md-24 bold-9 lh-3 mb-1 mb-md-2">познакомимся поближе?</h2>
+      <h3 class="text-14 text-md-16 bold-4 lh-4 fade-60 mb-8 mb-md-10">Напишите нам - мы перезвоним и расскажем о себе больше</h3>
+      <form class="form" data-form="submit">
+        <input type="hidden" value="Главная" name="theme">
+        <label class="form-label mb-4 mb-6" data-label="input">
+          <span class="text-16 bold-5 mb-2">Ваш телефон</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="tel" type="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" name="tel">
+            </div>
+            <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
+          </div>
+        </label>
+        <label class="form-label mb-8 mb-md-10" data-label="input">
+          <span class="text-16 bold-5 mb-2">Ваше имя</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="name" type="text" name="name">
+            </div>
+            <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваше имя!</span>
+          </div>
+        </label>
+        <button class="btn btn--text btn--lg btn--contur btn--swipe overflow-hidden w-max px-8 mb-5" data-waved type="submit">Отправить заявку</button>
+        <div class="link text-12 bold-5 lh-5 fade-40 pointer w-auto w-md-max" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">
+          Отправляя форму, Вы даете согласие на обработку <br class="d-none d-md-block">
+          Ваших персональных данных
+        </div>
+      </form>
+    </div>
+    <div class="acquaint__pack pack d-none d-lg-block bg-text radius-main w-100">
+      <div class="acquaint__bg bg-block radius-main">
+        <div class="blur absolute bg-brown zi-1"></div>
+      </div>
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </svg>
+        </span>
+      </div>
+      <picture>
+        <source srcset="img/pictures/acquaint.webp" type="image/webp">
+        <img class="acquaint__image image image--sd" src="img/pictures/acquaint.png" alt="">
+      </picture>
+      <div class="acquaint__tree parallax-top absolute zi-1 color-pink text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="1.1">
+        <svg class="icon">
+          <use xlink:href="img/icons.svg#tree">
+        </svg>
+      </div>
+      <div class="acquaint__lightning absolute zi-1 color-green text-28 text-md-42 pointer-none ease duration-1">
+        <svg class="icon zoom-3">
+          <use xlink:href="img/icons.svg#lightning">
+        </svg>
+      </div>
+      <div class="acquaint__burger parallax-bottom absolute zi-1 color-red text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="1.3">
+        <svg class="icon">
+          <use xlink:href="img/icons.svg#burger">
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= require('./includes/footer.html').default %>

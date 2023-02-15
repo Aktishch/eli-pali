@@ -1,0 +1,46 @@
+<div class="dialog dialog--xl feedback flex align-center justify-between radius-main py-10 px-6 py-lg-6">
+  <div class="feedback__block w-100 px-lg-10">
+    <h2 class="font-alt text text--uppercase text-22 text-md-24 bold-9 lh-3 mb-1 mb-md-2">хотите узнать подробнее?</h2>
+    <h3 class="text-14 text-md-16 bold-4 lh-4 fade-60 mb-8 mb-md-10">Отправьте заявку, мы перезвоним и уточним все детал</h3>
+    <form class="form" data-form="submit">
+      <input type="hidden" value="Главная" name="theme">
+      <label class="form-label mb-4 mb-6" data-label="input">
+        <span class="text-16 bold-5 mb-2">Ваш телефон</span>
+        <div class="form-wrapper">
+          <div class="input-cover">
+            <input class="input" data-input="tel" type="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" name="tel">
+          </div>
+          <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
+        </div>
+      </label>
+      <label class="form-label mb-8 mb-md-10" data-label="input">
+        <span class="text-16 bold-5 mb-2">Ваше имя</span>
+        <div class="form-wrapper">
+          <div class="input-cover">
+            <input class="input" data-input="name" type="text" name="name">
+          </div>
+          <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваше имя!</span>
+        </div>
+      </label>
+      <button class="btn btn--text btn--lg btn--contur btn--swipe overflow-hidden w-max px-8 mb-5" data-waved type="submit">Отправить заявку</button>
+      <div class="link text-12 bold-5 lh-5 fade-40 pointer w-auto w-md-max" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">
+        Отправляя форму, Вы даете согласие на обработку <br class="d-none d-md-block">
+        Ваших персональных данных
+      </div>
+    </form>
+  </div>
+  <div class="feedback__pack pack bg-text radius-main w-100">
+    <div class="loader">
+      <span class="loader-progress">
+        <svg class="loader-icon icon">
+          <use xlink:href="img/icons.svg#loader">
+        </svg>
+      </span>
+    </div>
+    <div class="blur absolute bg-brown zi-1"></div>
+    <picture>
+      <source srcset="img/pictures/feedback-bg.webp" type="image/webp">
+      <img class="image" src="img/pictures/feedback-bg.jpg" alt="">
+    </picture>
+  </div>
+</div>

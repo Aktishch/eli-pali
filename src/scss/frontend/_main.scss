@@ -1,0 +1,809 @@
+// Главный блок
+.main {
+  min-height : 1330px;
+  padding-top: 215px;
+
+  @media(max-width: $xl) {
+    & {
+      min-height: 1100px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    & {
+      min-height: 900px;
+    }
+  }
+
+  @media(max-width: $md) {
+    & {
+      min-height : 600px;
+      padding-top: 130px;
+    }
+  }
+
+  @media(max-width: $sm) {
+    & {
+      min-height: 470px;
+    }
+  }
+}
+
+// Квиз
+.quiz {
+  margin-top: -360px;
+
+  &__form {
+    background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, rgba(40, 40, 40, 0.8) 0%, rgba(28, 28, 28, 0.4) 100%);
+    backdrop-filter : blur(15px);
+  }
+
+  &-slider {
+    max-width: 460px;
+
+    &[data-quiz="stop"] .swiper-button-next {
+      pointer-events: none;
+      opacity       : 0.5;
+    }
+
+    &[data-quiz-end] &-bottom {
+      visibility: hidden;
+      opacity   : 0;
+    }
+
+    &__btn {
+      left : 0;
+      right: 0;
+    }
+  }
+
+  &__btn {
+    border-color: var(--color-white-30);
+  }
+
+  &__radio:checked+&__btn {
+    color           : var(--color-text);
+    background-color: var(--color-white);
+  }
+
+  &-images {
+    max-width: 570px;
+  }
+
+  &__pack {
+    &::before {
+      padding-top: 90%;
+    }
+  }
+
+  @media(max-width: $xl) {
+    & {
+      margin-top: -150px;
+    }
+
+    &-images {
+      max-width: 400px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &-slider {
+      max-width: 100%;
+    }
+  }
+
+  @media(max-width: $lg) {
+    margin-top: 0;
+  }
+}
+
+// Концерт
+.concert {
+  &__tree-red {
+    left: 40%;
+    top : 420px;
+
+    & .icon {
+      animation: parallax 4s linear infinite;
+    }
+  }
+
+  &__tree-yellow {
+    right : 7%;
+    bottom: 0;
+
+    & .icon {
+      animation: parallax 3s linear infinite;
+    }
+  }
+
+  &__burger {
+    right: 15%;
+    top  : 0;
+
+    & .icon {
+      animation: parallax 5s linear infinite;
+    }
+  }
+
+  &__pack {
+    max-width  : 860px;
+    margin-left: -150px;
+  }
+
+  &__blur {
+    filter   : blur(100px);
+    width    : 550px;
+    height   : 110px;
+    top      : 0;
+    left     : -30%;
+    animation: blur 3s linear infinite;
+  }
+
+  &__fire {
+    animation: fire 3s linear infinite;
+  }
+
+  @media(max-width: $xl) {
+    &__tree-red {
+      left: 50%;
+    }
+
+    &__pack {
+      max-width  : 600px;
+      margin-left: -100px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__tree-red {
+      left: 10%;
+    }
+
+    &__block {
+      align-items   : flex-start;
+      flex-direction: column;
+    }
+
+    &__pack {
+      max-width    : 100%;
+      margin-left  : 0;
+      margin-bottom: -100px;
+    }
+
+    &__blur {
+      left  : 0;
+      width : 340px;
+      height: 60px;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__tree-red {
+      top : 30%;
+      left: 5%;
+    }
+  }
+
+  @media(max-width: $sm) {
+    &__pack {
+      margin-bottom: -70px;
+    }
+  }
+}
+
+@keyframes fire {
+
+  0%,
+  100% {
+    transform: scale(1.4);
+    opacity  : 1;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity  : 0.5;
+  }
+}
+
+// Мероприятия
+.events {
+
+  &::before,
+  &::after {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    bottom          : 0;
+    width           : 350px;
+    height          : 100%;
+    background-image: linear-gradient(270deg, var(--color-text-90) 31.04%, var(--color-none) 100%);
+    z-index         : 10;
+  }
+
+  &::before {
+    left     : 0;
+    transform: scaleX(-1);
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  &__anim {
+    animation: events 2s linear infinite;
+  }
+
+  &__item {
+    animation: events 5s linear infinite;
+
+    &--name {
+      height       : 72px;
+      border-radius: 100px;
+    }
+
+    &--akva {
+      background-color: var(--color-akva-20);
+    }
+
+    &--green {
+      background-color: var(--color-green-20);
+    }
+
+    &--pink {
+      background-color: var(--color-pink-20);
+    }
+  }
+
+  @media(max-width: $lg) {
+
+    &::before,
+    &::after {
+      width: 90px;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__item--name {
+      height: 50px;
+    }
+  }
+}
+
+@keyframes events {
+
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(100deg);
+  }
+}
+
+// Репертуар
+.repertoire {
+  &__icon {
+    margin-right : -35px;
+    margin-bottom: -20px;
+  }
+
+  &__pack {
+    max-width: 270px;
+  }
+
+  &__img {
+    &--1 {
+      top : 90px;
+      left: 40px;
+    }
+
+    &--2 {
+      top  : 40px;
+      right: 36px;
+    }
+  }
+
+  &__content {
+    margin-inline: -40px;
+    margin-top   : -60px;
+    margin-bottom: -20px;
+  }
+
+  @media (hover) {
+    &__card:hover &__img {
+      visibility: visible;
+      opacity   : 1;
+    }
+
+    &__card:hover &__pack {
+      animation: record 5s linear infinite both;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__icon {
+      margin-right : -18px;
+      margin-bottom: -8px;
+    }
+
+    &__content {
+      margin-inline: -20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@keyframes record {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Клипы
+.clips {
+  &__card {
+    border-radius: 0;
+  }
+
+  &__play {
+    inset: 0;
+  }
+
+  &__btn {
+    width : 128px;
+    height: 128px;
+  }
+
+  @media(max-width: $lg) {
+    &__btn {
+      width : 80px;
+      height: 80px;
+    }
+  }
+}
+
+// Преимущества
+.advantages {
+  &__musician {
+    left     : auto;
+    bottom   : 0;
+    max-width: 580px;
+  }
+
+  &__item {
+    &--1 {
+      background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, rgba(40, 40, 40, 0.8) 0%, rgba(28, 28, 28, 0.4) 100%);
+      backdrop-filter : blur(15px);
+    }
+  }
+
+  &__record {
+    max-width: 110px;
+  }
+
+  &__microphone {
+    max-width: 159px;
+    top      : 0;
+    right    : 20px;
+  }
+
+  @media(min-width: $lg) {
+    &__content {
+      max-width: 700px;
+    }
+
+    &__title {
+      text-align: left;
+    }
+  }
+
+  @media(max-width: $xl) {
+    &__musician {
+      left: -150px;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__microphone {
+      max-width: 115px;
+    }
+
+    &__record {
+      max-width   : 94px;
+      margin-block: -16px;
+    }
+
+    &__item {
+      &--3 {
+        height: 150px;
+      }
+    }
+  }
+}
+
+// Команда
+.team {
+  &__icon {
+    margin-inline: -15px;
+    margin-bottom: -20px;
+  }
+
+  &__card {
+    background: linear-gradient(239.35deg, rgba(12, 5, 7, 0) 66.74%, #0C0507 90.66%), #0C0507;
+  }
+
+  &__pack {
+    &::after {
+      content   : "";
+      position  : absolute;
+      inset     : 0;
+      background: linear-gradient(180deg, var(--color-none) 50.87%, var(--color-text-40) 100%);
+      z-index   : 1;
+    }
+  }
+
+  &__bg {
+    background-image: linear-gradient(180deg, var(--color-none) 50.87%, var(--team-bg) 100%);
+
+    &--primary {
+      --team-bg: var(--color-primary-30);
+    }
+
+    &--green {
+      --team-bg: var(--color-green-30);
+    }
+
+    &--purple {
+      --team-bg: var(--color-purple-30);
+    }
+
+    &--sky {
+      --team-bg: var(--color-sky-30);
+    }
+
+    &--red {
+      --team-bg: var(--color-red-30);
+    }
+
+    &--akva {
+      --team-bg: var(--color-akva-30);
+    }
+
+    &--blue {
+      --team-bg: var(--color-blue-30);
+    }
+  }
+
+  &__info {
+    border-radius   : 100px;
+    height          : 46px;
+    background-color: var(--team-color);
+
+    &--primary {
+      --team-color: var(--color-primary-80);
+    }
+
+    &--green {
+      --team-color: var(--color-green-80);
+    }
+
+    &--purple {
+      --team-color: var(--color-purple-80);
+    }
+
+    &--sky {
+      --team-color: var(--color-sky-80);
+    }
+
+    &--red {
+      --team-color: var(--color-red-80);
+    }
+
+    &--akva {
+      --team-color: var(--color-akva-80);
+    }
+
+    &--blue {
+      --team-color: var(--color-blue-80);
+    }
+  }
+
+  &__logo {
+    bottom: -100px;
+    right : -90px;
+  }
+
+  @media(min-width: $lg) {
+    &-wrapper {
+      transform: none !important;
+    }
+
+    &__person {
+      max-width: 370px;
+    }
+
+    &__bg {
+      &--sky {
+        background-image: linear-gradient(224.25deg, var(--color-none) 60.84%, var(--color-primary-40) 97.51%);
+      }
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__logo {
+      bottom: -45px;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__icon {
+      margin-inline: -10px;
+      margin-bottom: -7px;
+    }
+
+    &__logo {
+      bottom: -15px;
+      right : 15px;
+    }
+  }
+}
+
+// Приглашение
+.invitation {
+  &__star {
+    bottom: -200px;
+    left  : 45%;
+    filter: blur(4px);
+
+    & .icon {
+      animation: parallax 6s linear infinite;
+    }
+  }
+
+  &__tree {
+    top  : -800px;
+    right: 10%;
+
+    & .icon {
+      animation: parallax 4s linear infinite;
+    }
+  }
+
+  &__burger {
+    top : -400px;
+    left: 50%;
+
+    & .icon {
+      animation: parallax 7s linear infinite;
+    }
+  }
+
+  &__pack {
+    max-width: 1100px;
+  }
+
+  &__feedback {
+    background     : radial-gradient(98.48% 326.98% at 0% 3.35%, #282828 0%, rgba(28, 28, 28, 0.8) 100%);
+    backdrop-filter: blur(15px);
+  }
+
+  @media(min-width: $lg) {
+    &__feedback {
+      max-width: 500px;
+    }
+  }
+
+  @media(max-width: $xl) {
+    &__pack {
+      max-width: 900px;
+    }
+
+    &__tree {
+      right: 5%;
+    }
+
+    &__burger {
+      left: 5%;
+      top : -300px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    & {
+      padding-bottom: 0;
+    }
+
+    &__tree {
+      top: 0;
+    }
+
+    &__block {
+      flex-direction: column;
+      align-items   : flex-start;
+      max-width     : 500px;
+    }
+
+    &__bg {
+      position: static;
+      margin  : -70px -15px 0 -45px;
+    }
+
+    &__pack {
+      max-width: 100%;
+    }
+  }
+
+  @media(max-width: $sm) {
+    &__star {
+      left: 80%;
+    }
+
+    &__burger {
+      top: -500px;
+    }
+  }
+}
+
+// Вопросы
+.questions {
+  &__circle {
+    min-width: 20px;
+    width    : 20px;
+    height   : 20px;
+    border   : 2px solid var(--color-primary);
+  }
+
+  &__arrow {
+    transform: rotate(180deg);
+  }
+
+  &__accordion[data-accordion="active"] &__logo {
+    color: var(--color-primary);
+  }
+
+  &__accordion[data-accordion="active"] &__circle {
+    background-color: var(--color-primary);
+  }
+
+  &__accordion[data-accordion="active"] &__arrow {
+    color    : var(--color-white);
+    transform: rotate(90deg);
+  }
+}
+
+// Отзывы
+.reviews {
+  &-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  &__card {
+    max-width       : 370px;
+    background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, rgba(40, 40, 40, 0.8) 0%, rgba(28, 28, 28, 0.4) 100%);
+    backdrop-filter : blur(15px)
+  }
+
+  &__pack {
+    max-width: 82px;
+  }
+
+  @media(max-width: $md) {
+    &__card {
+      max-width: 310px;
+    }
+
+    &__pack {
+      max-width: 60px;
+    }
+  }
+}
+
+// Знакомство
+.acquaint {
+  &__pack {
+    max-width       : 600px;
+    height          : 530px;
+    background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, var(--color-text) 0%, rgba(28, 28, 28, 0.88) 100%);
+    backdrop-filter : blur(15px);
+    overflow        : visible;
+  }
+
+  &__bg {
+    transform: scaleY(-1);
+  }
+
+  &__image {
+    transform: scale(1.2) translateY(-24px);
+  }
+
+  &__tree {
+    left  : 10%;
+    bottom: -550px;
+
+    & .icon {
+      animation: parallax 4s linear infinite;
+    }
+  }
+
+  &__lightning {
+    top : -10%;
+    left: 65%;
+
+    & .icon {
+      animation: lightning 3s linear infinite, events 5s linear infinite;
+    }
+  }
+
+  &__burger {
+    top  : -700px;
+    right: 5%;
+
+    & .icon {
+      animation: parallax 6s linear infinite;
+    }
+  }
+
+  @media(min-width: $lg) {
+    &__feedback {
+      max-width: 500px;
+    }
+  }
+
+  @media(max-width: $xl) {
+    &__pack {
+      height: 517px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__block {
+      max-width: 500px;
+    }
+  }
+
+  @media(max-width: $sm) {
+    & {
+      padding-top: 0;
+    }
+  }
+}
+
+@keyframes lightning {
+
+  0%,
+  100% {
+    filter: hue-rotate(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+// Обратная связь
+.feedback {
+  &__block {
+    max-width: 530px;
+  }
+
+  &__pack {
+    max-width: 600px;
+    height   : 530px;
+  }
+
+  @media(max-width: $xl) {
+    & {
+      width: 600px;
+    }
+
+    &__pack {
+      display: none;
+    }
+  }
+}

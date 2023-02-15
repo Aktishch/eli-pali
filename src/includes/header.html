@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="autor" content="Студия КИТ"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+  <title><%= data.title %></title>
+</head>
+<body>
+
+  <!-- Шапка документа -->
+
+  <header class="header container flex align-center justify-between gap-5 gap-md-9 fixed zi-4 py-4 py-lg-6 linear duration-3" data-header="auto">
+    <button class="btn btn--white d-lg-none text-24 text-md-44 radius-2 p-1" data-burger data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#burger">
+      </svg>
+    </button>
+    <div class="d-none d-lg-flex flex-column">
+      <span class="color-white text-14 bold-4 fade-60 mb-1">г.Краснодар, ул. Ёлопалочная,22</span>
+      <a class="btn btn--primary font-alt link color-white text text--uppercase text-22 bold-9 w-max" href="tel: +7 918 000 00 00">+7 918 000 00 00</a>
+    </div>
+    <div class="social d-none d-lg-flex align-center gap-3">
+      <a class="social__btn-md btn btn--white btn--md btn--fade radius-max p-0" data-waved href="javascript: ;" target="_blank">
+        <svg class="icon text-16">
+          <use xlink:href="img/icons.svg#tg">
+        </svg>
+      </a>
+      <a class="social__btn-md btn btn--white btn--md btn--fade radius-max p-0" data-waved href="javascript: ;" target="_blank">
+        <svg class="icon text-20">
+          <use xlink:href="img/icons.svg#wa">
+        </svg>
+      </a>
+    </div>
+    <a class="header__logo logo btn w-100 mx-auto" href="/">
+      <picture>
+        <source srcset="img/pictures/logo.webp" type="image/webp">
+        <img class="w-100" src="img/pictures/logo.png" alt="">
+      </picture>
+    </a>
+    <button class="header__btn btn btn--white btn--lg btn--contur btn--swipe gap-1 text-12 text-md-16 overflow-hidden px-4 px-md-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-feedback.html">
+      Узнать стоимость <span class="d-none d-md-inline">на вашу дату</span>
+    </button>
+  </header>
+
+  <!-- Мобильное меню -->
+
+  <section class="mobile fixed zi-6 w-100 h-100 ease duration-1" data-mobile="hidden">
+    <div class="mobile__content flex flex-column bg-text overflow-auto w-100 h-100 ease duration-3">
+      <div class="mobile__head flex align-center gap-8 relative py-3 px-4 ease duration-5 delay-3">
+        <button class="btn btn--white text-24 radius-2 p-1" data-mobile-close data-waved>
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#close">
+          </svg>
+        </button>
+        <a class="logo btn w-100" href="/">
+          <picture>
+            <source srcset="img/pictures/logo.webp" type="image/webp">
+            <img class="w-100" src="img/pictures/logo.png" alt="">
+          </picture>
+        </a>
+      </div>
+      <div class="mobile__nav flex flex-column gap-8 relative color-white mb-10 p-4 ease duration-9 delay-5">
+        <a class="link text-16 fade-60 w-max" data-scroll="top" href="#concert">О нас</a>
+        <a class="link text-16 fade-60 w-max" data-scroll="top" href="#repertoire">Репертуар</a>
+        <a class="link text-16 fade-60 w-max" data-scroll="top" href="#advantages">Почему мы</a>
+        <a class="link text-16 fade-60 w-max" data-scroll="top" href="#team">Команда</a>
+        <a class="link text-16 fade-60 w-max" data-scroll="top" href="#questions">Вопрос-ответ</a>
+        <a class="link text-16 fade-60 w-max" data-scroll="top" href="#reviews">Отзывы</a>
+        <a class="link text-16 fade-60 w-max" data-scroll="top" href="#contacts">Контакты</a>
+      </div>
+      <div class="mobile__footer relative mt-auto px-4 pt-4 pb-10 ease duration-5 delay-9">
+        <div class="flex flex-column mb-7">
+          <span class="color-white text-14 bold-4 fade-60 mb-1">г.Краснодар, ул. Ёлопалочная,22</span>
+          <a class="btn btn--primary font-alt link color-white text text--uppercase text-22 bold-9 w-max" href="tel: +7 918 000 00 00">+7 918 000 00 00</a>
+        </div>
+        <div class="social flex align-center gap-4">
+          <a class="social__btn-lg btn btn--white btn--lg btn--fade radius-max p-0" data-waved href="javascript: ;" target="_blank">
+            <svg class="icon text-24">
+              <use xlink:href="img/icons.svg#tg">
+            </svg>
+          </a>
+          <a class="social__btn-lg btn btn--white btn--lg btn--fade radius-max p-0" data-waved href="javascript: ;" target="_blank">
+            <svg class="icon text-30">
+              <use xlink:href="img/icons.svg#wa">
+            </svg>
+          </a>
+        </div>
+    </div>
+    </div>
+  </section>

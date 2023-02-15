@@ -1,0 +1,230 @@
+// Логотип
+.logo {
+  width: 160px;
+
+  @media(max-width: $lg) {
+    width: 65px;
+  }
+}
+
+// Соц-сети
+.social {
+  &__btn-lg {
+    width: var(--size-lg);
+  }
+
+  &__btn-md {
+    width: var(--size-md);
+  }
+}
+
+// Шапка документа
+.header {
+  top  : 0;
+  left : 0;
+  right: 0;
+
+  @media(min-width: $lg) {
+    &[data-header="scroll"] &__logo {
+      width: 100px;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__btn {
+      height: 46px;
+    }
+  }
+}
+
+
+// Мобильное меню
+.mobile {
+  inset: 0;
+
+  &__content {
+    max-width : 375px;
+    box-shadow: 0 0 0 100vw var(--color-black-50);
+  }
+
+  &:not([data-mobile="open"]) {
+    opacity   : 0;
+    visibility: hidden;
+  }
+
+  &:not([data-mobile="open"]) &__content {
+    transform : translateX(-100%);
+    opacity   : 0;
+    visibility: hidden;
+  }
+
+  &:not([data-mobile="open"]) &__head {
+    transform: translateY(-80px);
+  }
+
+  &:not([data-mobile="open"]) &__nav {
+    transform: translateX(-220px);
+    opacity  : 0;
+  }
+
+  &:not([data-mobile="open"]) &__footer {
+    transform: translateY(-50px);
+    opacity  : 0;
+  }
+
+  &[data-mobile="open"] {
+    opacity   : 1;
+    visibility: visible;
+  }
+
+  &[data-mobile="open"] &__content {
+    transform : translateX(0);
+    opacity   : 1;
+    visibility: visible;
+  }
+
+  &[data-mobile="open"] &__head {
+    transform: translateY(0);
+  }
+
+  &[data-mobile="open"] &__nav {
+    transform: translateX(0);
+    opacity  : 1;
+  }
+
+  &[data-mobile="open"] &__footer {
+    transform: translateY(0);
+    opacity  : 1;
+  }
+
+  &__accordion[data-accordion="active"] &__arrow {
+    transform: rotate(90deg);
+  }
+}
+
+// Размытие
+.blur {
+  width    : 940px;
+  height   : 450px;
+  filter   : blur(200px);
+  left     : 50%;
+  top      : -350px;
+  transform: translateX(-50%);
+  animation: blur 3s linear infinite;
+
+  @media(max-width: $lg) {
+    & {
+      width : 500px;
+      height: 300px;
+      top   : -200px;
+    }
+  }
+
+  @media(max-width: $md) {
+    & {
+      width : 235px;
+      height: 200px;
+      top   : -100px;
+      filter: blur(100px);
+    }
+  }
+}
+
+@keyframes blur {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+}
+
+// Параллакс
+.parallax {
+  &-top {
+    transform: translate3d(0, calc(-1 * var(--y)), 0);
+  }
+
+  &-bottom {
+    transform: translate3d(0, var(--y), 0);
+  }
+}
+
+@keyframes parallax {
+  0% {
+    transform: rotate(0deg);
+    opacity  : 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity  : 1;
+  }
+}
+
+// Белый градиент
+.gradient {
+  position: relative;
+
+  &--light {
+    --gradient: var(--color-white-90);
+  }
+
+  &--dark {
+    --gradient: var(--color-text-60);
+  }
+
+  &::before,
+  &::after {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    bottom          : 0;
+    width           : 375px;
+    height          : 100%;
+    background-image: linear-gradient(270deg, var(--gradient) 0%, var(--color-none) 100%);
+    pointer-events  : none;
+    z-index         : 10;
+  }
+
+  &::before {
+    left     : 0;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  @media(max-width: $xl) {
+
+    &::before,
+    &::after {
+      width: 200px;
+    }
+  }
+
+  @media(max-width: $md) {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// Контакты
+.contacts {
+  @media(max-width: $md) {
+    &__item {
+      border-right: none;
+    }
+  }
+}

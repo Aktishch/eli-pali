@@ -1,0 +1,58 @@
+// Цвета
+$colors: ("none": rgba(0, 0, 0, 0),
+  "primary": #F69F5F,
+  "black": #000000,
+  "text": #050102,
+  "white": #ffffff,
+  "grey": #BFCCD9,
+  "gray": #333333,
+  "brown": #8F5251,
+  "red": #FF5959,
+  "akva": #5FF6F6,
+  "yellow": #F6D55F,
+  "pink": #E15FF6,
+  "purple": #6b5ff6cc,
+  "sky": #5fdbf6cc,
+  "blue": #3367cd,
+  "green": #74F65F);
+
+// Шрифты
+$font-family: ("alt": "Montserrat",
+  "base": "Inter"
+);
+
+// Разрешения экрана
+$sm: 460.98px;
+$md: 768.98px;
+$lg: 1024.98px;
+$xl: 1280.98px;
+
+// Переменные в CSS
+:root {
+
+  @each $key,
+  $value in $font-family {
+    --font-#{$key}: "#{$value}",
+    Arial,
+    Helvetica,
+    sans-serif;
+  }
+
+  @for $i from 5 through 26 {
+    --text-#{calc(2 * $i)}: #{calc(2 * $i / 16) + rem};
+  }
+
+  @each $key,
+  $value in $colors {
+    @include getColors($value, $key);
+  }
+
+  --sm : #{calc($sm - 30.98px)};
+  --md : #{calc($md - 48.98px)};
+  --lg : #{calc($lg - 54.98px)};
+  --xl : #{calc($xl - 110.98px)};
+
+  --spacing : 4px;
+  --size-lg : 56px;
+  --size-md : 36px;
+}

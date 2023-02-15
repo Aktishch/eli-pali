@@ -1,0 +1,11 @@
+// Тело документа
+body {
+  color           : var(--color-text);
+  background-color: var(--color-text);
+}
+
+// Выделение
+::selection {
+  color           : var(--color-white);
+  background-color: var(--color-primary);
+}
