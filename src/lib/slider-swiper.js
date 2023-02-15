@@ -76,6 +76,8 @@ const init = () => {
     loop: true,
     allowTouchMove: false,
     centeredSlides: true,
+    watchSlidesProgress: true,
+    freeMode: true,
 
     autoplay: {
 
@@ -100,8 +102,11 @@ const init = () => {
     slidesPerView: 1.2,
     slidesPerGroup: 1,
     spaceBetween: 16,
+    speed: 1000,
     loop: true,
     grabCursor: true,
+    watchSlidesProgress: true,
+    freeMode: true,
 
     breakpoints: {
 
@@ -149,8 +154,11 @@ const init = () => {
     slidesPerView: 1.2,
     slidesPerGroup: 1,
     spaceBetween: 16,
+    speed: 1000,
     loop: true,
     grabCursor: true,
+    watchSlidesProgress: true,
+    freeMode: true,
 
     breakpoints: {
 

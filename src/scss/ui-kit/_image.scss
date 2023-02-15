@@ -58,6 +58,10 @@
     object-position: bottom right;
   }
 
+  &--b {
+    object-position: bottom;
+  }
+
   &--rise {
     transition: transform 0.3s linear;
   }

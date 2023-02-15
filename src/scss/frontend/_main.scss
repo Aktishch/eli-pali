@@ -593,6 +593,12 @@
     backdrop-filter: blur(15px);
   }
 
+  @media(min-width: 2000px) {
+    &__pack {
+      margin-right: 20%;
+    }
+  }
+
   @media(min-width: $lg) {
     &__feedback {
       max-width: 500px;
