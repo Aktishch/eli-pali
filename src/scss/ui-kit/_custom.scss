@@ -90,11 +90,11 @@
 
     @media(min-width: $xl) {
       &-prev:not(.default) {
-        left: -25px;
+        left: 23%;
       }
 
       &-next:not(.default) {
-        right: -25px;
+        right: 23%;
       }
     }
   }

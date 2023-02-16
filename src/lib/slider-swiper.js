@@ -120,13 +120,14 @@ const init = () => {
       [media.lg]: {
 
         slidesPerView: 2.5,
-        centeredSlides: true,
+        centeredSlides: true
 
       },
 
       [media.xl]: {
 
-        slidesPerView: 3
+        slidesPerView: 4,
+        centeredSlides: true
 
       }
 
@@ -166,6 +167,18 @@ const init = () => {
 
         slidesPerView: 2,
         spaceBetween: 42
+
+      },
+
+      [media.lg]: {
+
+        slidesPerView: 3
+
+      },
+
+      [media.xl]: {
+
+        slidesPerView: 4
 
       }
 

@@ -288,6 +288,10 @@
 
 // Репертуар
 .repertoire {
+  &-slider {
+    max-width: 1920px;
+  }
+
   &__icon {
     margin-right : -35px;
     margin-bottom: -20px;
@@ -347,6 +351,10 @@
 
 // Клипы
 .clips {
+  &-slider {
+    max-width: 1920px;
+  }
+
   &__card {
     border-radius: 0;
   }

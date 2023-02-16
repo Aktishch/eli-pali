@@ -278,7 +278,7 @@
   }
 ] %>
 
-<section class="repertoire container gradient gradient--light bg-white overflow-hidden" id="repertoire">
+<section class="repertoire container gradient gradient--light bg-white overflow-hidden px-4" id="repertoire">
   <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">
     что мы 
     <span class="relative zi-1 color-primary text-20 text-md-42">
@@ -288,8 +288,8 @@
     </span>
     сполняем!
   </h2>
-  <div class="repertoire-slider relative mb-8 mb-md-10">
-    <div class="swiper swiper--overwrap overflow-visible">
+  <div class="repertoire-slider relative w-100 mx-auto mb-8 mb-md-10">
+    <div class="swiper swiper--overwrap">
       <div class="swiper-wrapper">
         <% for (var i = 0; i < repertoire.length; i++) { %>
           <div class="swiper-slide repertoire__card card align-center justify-center border pointer h-100 p-5 p-md-10" data-waved>
@@ -344,10 +344,10 @@
 
 <% var clips = ['1', '2', '1', '2', '1', '2'] %>
 
-<section class="clips container gradient gradient--light bg-white overflow-hidden pt-0">
+<section class="clips container gradient gradient--light bg-white overflow-hidden px-4 pt-0">
   <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">как мы это делаем</h2>
-  <div class="clips-slider relative">
-    <div class="swiper swiper--overwrap overflow-visible">
+  <div class="clips-slider relative w-100 mx-auto">
+    <div class="swiper swiper--overwrap">
       <div class="swiper-wrapper">
         <% for (var i = 0; i < clips.length; i++) { %>
           <a class="swiper-slide clips__card card link-wrapper h-100" data-fancybox href="img/pictures/clip-<%= clips[i] %>.png">
