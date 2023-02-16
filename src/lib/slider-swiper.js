@@ -105,8 +105,6 @@ const init = () => {
     speed: 1000,
     loop: true,
     grabCursor: true,
-    watchSlidesProgress: true,
-    freeMode: true,
 
     breakpoints: {
 
@@ -158,8 +156,6 @@ const init = () => {
     speed: 1000,
     loop: true,
     grabCursor: true,
-    watchSlidesProgress: true,
-    freeMode: true,
 
     breakpoints: {
 
