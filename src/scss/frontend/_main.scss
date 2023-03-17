@@ -292,6 +292,10 @@
     max-width: 1920px;
   }
 
+  &__card {
+    max-width: 370px;
+  }
+
   &__icon {
     margin-right : -35px;
     margin-bottom: -20px;
@@ -339,6 +343,12 @@
     &__content {
       margin-inline: -20px;
       margin-bottom: 0;
+    }
+  }
+
+  @media(max-width: $sm) {
+    &__card {
+      max-width: 280px;
     }
   }
 }

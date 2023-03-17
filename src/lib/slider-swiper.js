@@ -99,7 +99,7 @@ const init = () => {
     },
 
     effect: 'coverflow',
-    slidesPerView: 1.2,
+    slidesPerView: 'auto',
     slidesPerGroup: 1,
     spaceBetween: 16,
     speed: 1000,
@@ -110,21 +110,18 @@ const init = () => {
 
       [media.md]: {
 
-        slidesPerView: 2,
         spaceBetween: 30
 
       },
 
       [media.lg]: {
 
-        slidesPerView: 2.5,
         centeredSlides: true
 
       },
 
       [media.xl]: {
 
-        slidesPerView: 4,
         centeredSlides: true
 
       }
