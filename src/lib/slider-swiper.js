@@ -224,7 +224,6 @@ const init = () => {
   const reviewSlider = new Swiper('.reviews-slider .swiper', {
 
     slidesPerView: 'auto',
-    slidesPerGroup: 1,
     spaceBetween: 16,
     loop: true,
     speed: 8000,

@@ -713,17 +713,9 @@
     backdrop-filter : blur(15px)
   }
 
-  &__pack {
-    max-width: 82px;
-  }
-
   @media(max-width: $md) {
     &__card {
       max-width: 310px;
-    }
-
-    &__pack {
-      max-width: 60px;
     }
   }
 }

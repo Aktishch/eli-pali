@@ -791,25 +791,15 @@
   <div class="blur absolute bg-brown zi-1"></div>
   <div class="relative color-white">
     <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-3 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">мы впечатляем!</h2>
-    <div class="reviews-slider relative pointer-none mb-4 mb-md-8">
+    <div class="reviews-slider relative mb-4 mb-md-8">
       <div class="swiper overflow-visible">
         <div class="reviews-wrapper swiper-wrapper">
           <% for (var i = 0; i < 10; i++) { %>
             <div class="swiper-slide w-max h-auto">
-              <div class="reviews__card card color-white bg-none w-100 h-100 p-6 p-md-8">
+              <div class="reviews__card card color-white bg-none pointer w-100 h-100 p-6 p-md-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-reviews.html">
                 <div class="flex align-center justify-between gap-5 mb-8">
-                  <div class="reviews__pack pack pack--box bg-grey radius-max w-100">
-                    <div class="loader">
-                      <span class="loader-progress">
-                        <svg class="loader-icon icon">
-                          <use xlink:href="img/icons.svg#loader">
-                        </svg>
-                      </span>
-                    </div>
-                    <picture>
-                      <source srcset="img/pictures/review.webp" type="image/webp">
-                      <img class="image" loading="lazy" src="img/pictures/review.png" alt="">
-                    </picture>
+                  <div class="text-30 text-md-40">
+                    <img class="icon zoom-2 radius-max" src="img/pictures/review.svg" alt="">
                   </div>
                   <div class="text-42 fade-20">
                     <svg class="icon zoom-2">
@@ -827,25 +817,15 @@
         </div>
       </div>
     </div>
-    <div class="reviews-slider relative pointer-none">
+    <div class="reviews-slider relative">
       <div class="swiper overflow-visible" dir="rtl">
         <div class="reviews-wrapper swiper-wrapper">
           <% for (var i = 0; i < 10; i++) { %>
             <div class="swiper-slide w-max h-auto" dir="ltr">
-              <div class="reviews__card card color-white bg-none w-100 h-100 p-6 p-md-8">
+              <div class="reviews__card card color-white bg-none pointer w-100 h-100 p-6 p-md-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-reviews.html">
                 <div class="flex align-center justify-between gap-5 mb-8">
-                  <div class="reviews__pack pack pack--box bg-grey radius-max w-100">
-                    <div class="loader">
-                      <span class="loader-progress">
-                        <svg class="loader-icon icon">
-                          <use xlink:href="img/icons.svg#loader">
-                        </svg>
-                      </span>
-                    </div>
-                    <picture>
-                      <source srcset="img/pictures/review.webp" type="image/webp">
-                      <img class="image" loading="lazy" src="img/pictures/review.png" alt="">
-                    </picture>
+                  <div class="text-30 text-md-40">
+                    <img class="icon zoom-2 radius-max" src="img/pictures/review.svg" alt="">
                   </div>
                   <div class="text-42 fade-20">
                     <svg class="icon zoom-2">
