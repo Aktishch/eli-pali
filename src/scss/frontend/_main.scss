@@ -823,3 +823,31 @@
     }
   }
 }
+
+// Отправка
+.submit {
+  &__circle {
+    width : 160px;
+    height: 160px;
+  }
+
+  &__item {
+    &--1 {
+      top : 25%;
+      left: -50px;
+
+      & .icon {
+        animation: parallax 4s linear infinite;
+      }
+    }
+
+    &--2 {
+      top  : 25%;
+      right: -50px;
+
+      & .icon {
+        animation: lightning 3s linear infinite, events 5s linear infinite;
+      }
+    }
+  }
+}
