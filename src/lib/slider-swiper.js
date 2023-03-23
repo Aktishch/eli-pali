@@ -249,6 +249,48 @@ const init = () => {
 
   })
 
+  const performancesSlider = new Swiper('.performances-slider .swiper', {
+
+    navigation: {
+
+      prevEl: '.performances-slider .swiper-button-prev',
+      nextEl: '.performances-slider .swiper-button-next'
+
+    },
+
+    pagination: {
+
+      el: '.performances-slider .swiper-pagination',
+      clickable: true
+
+    },
+
+    slidesPerView: 'auto',
+    slidesPerGroup: 1,
+    spaceBetween: 16,
+    speed: 1000,
+    grabCursor: true,
+
+    breakpoints: {
+
+      [media.md]: {
+
+        loop: true
+
+      },
+
+      [media.xl]: {
+
+        spaceBetween: 36,
+        centeredSlides: true,
+        loop: true
+
+      }
+
+    }
+
+  })
+
   window.Swiper = Swiper
 
 }

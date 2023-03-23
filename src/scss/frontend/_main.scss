@@ -286,6 +286,53 @@
   }
 }
 
+// Выступления
+.performances {
+  background: linear-gradient(180deg, var(--color-white-60) 0%, var(--color-none) 100%), #ECECEC;
+
+  &-slide {
+    max-width: 360px;
+  }
+
+  @media(min-width: $md) {
+    &-slider--length &-slide {
+      max-width     : 100%;
+      flex-direction: row;
+      align-items   : center;
+    }
+
+    &-slider--length &__pack {
+      max-width   : 300px;
+      margin-right: 30px;
+    }
+  }
+
+  @media(min-width: $lg) {
+    &-slider--length &__pack {
+      max-width   : 420px;
+      margin-right: 80px;
+    }
+  }
+
+  @media(min-width: $xl) {
+    &__btn {
+      &--prev {
+        left: -30px !important;
+      }
+
+      &--next {
+        right: -30px !important;
+      }
+    }
+  }
+
+  @media(max-width: $sm) {
+    &-slide {
+      max-width: 100%;
+    }
+  }
+}
+
 // Репертуар
 .repertoire {
   &-slider {

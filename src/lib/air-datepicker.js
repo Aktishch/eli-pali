@@ -11,6 +11,14 @@ const init = () => {
 
     new AirDatepicker(calendar, {
 
+      onSelect: () => {
+
+        const quiz = document.querySelector('*[data-quiz]')
+
+        quiz.dataset.quiz = 'auto'
+
+      },
+
       locale: localeRu,
       isMobile: touchDevice.init(),
       autoClose: true,

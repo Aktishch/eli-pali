@@ -262,6 +262,58 @@
   </div>
 </section>
 
+<!-- Выступления -->
+
+<section class="performances container bg-grey">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-3 mb-5 mb-lg-10 ease duration-4 delay-2 anim anim--up" data-anim="hidden">
+    НАШИ ОТКРЫТЫЕ <img class="icon d-inline" src="img/pictures/guitar.svg" alt=""> ВЫСТУПЛЕНИЯ
+  </h2>
+  <div class="performances-slider performances-slider--length relative p-lg-5">
+    <div class="swiper swiper--overwrap">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < 4; i++) { %>
+          <div class="performances-slide swiper-slide card w-100 h-100 p-2 p-md-4" data-waved>
+            <div class="performances__pack pack pack--rect bg-grey radius-main w-100">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/quiz-1.webp" type="image/webp">
+                <img class="image image--rise" loading="lazy" src="img/pictures/quiz-1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card-content px-3 py-5 px-md-0 py-md-10">
+              <h3 class="font-alt text-18 text-md-22 text-lg-24 bold-5 lh-2 mb-3">Выступление в McKEY Pub & Restaurant</h3>
+              <p class="text-14 text-md-16 bold-4 lh-3 fade-60 mb-5 mb-md-8">ул. Красных Партизан, 218</p>
+              <div class="flex align-center mt-auto">
+                <svg class="icon color-primary text-20 text-md-30 mr-3">
+                  <use xlink:href="img/icons.svg#calendar">
+                </svg>
+                <h3 class="font-alt text-18 text-md-22 text-lg-24 bold-7 lh-2">22.03.2023</h3>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+      <div class="swiper-pagination d-flex d-md-none color-primary mt-5 mt-md-10"></div>
+    </div>
+    <button class="performances__btn performances__btn--prev swiper-button-prev btn btn--text btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-left">
+      </svg>
+    </button>
+    <button class="performances__btn performances__btn--next swiper-button-next btn btn--text btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-right">
+      </svg>
+    </button>
+  </div>
+</section>
+
 <!-- Репертуар -->
 
 <% var repertoire = [
