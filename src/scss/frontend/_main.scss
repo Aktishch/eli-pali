@@ -47,8 +47,11 @@
     }
 
     &[data-quiz-end] &-bottom {
-      visibility: hidden;
-      opacity   : 0;
+      display: none;
+    }
+
+    &[data-quiz-end] &-submit {
+      display: flex;
     }
 
     &__btn {
