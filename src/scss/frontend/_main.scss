@@ -1,7 +1,22 @@
 // Главный блок
 .main {
-  min-height : 1330px;
+  min-height : 1450px;
   padding-top: 215px;
+
+  &__info {
+    background: linear-gradient(0deg, #22121C, #22121C), radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 73.05%);
+    border-radius: 100px;
+    transform: rotate(-6deg);
+  }
+
+  &__blur {
+    width: 54px;
+    height: 54px;
+    filter   : blur(40px);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   @media(max-width: $xl) {
     & {
@@ -17,14 +32,21 @@
 
   @media(max-width: $md) {
     & {
-      min-height : 600px;
+      min-height : 800px;
       padding-top: 130px;
     }
   }
 
   @media(max-width: $sm) {
     & {
-      min-height: 470px;
+      min-height: 560px;
+    }
+  }
+
+  @media(min-width: 2000px) {
+    &__bg {
+      width: 1920px;
+      margin-inline: auto;
     }
   }
 }

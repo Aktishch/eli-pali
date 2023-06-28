@@ -24,15 +24,19 @@
   left : 0;
   right: 0;
 
+  &__btn {
+    border-bottom: 1px dashed var(--color-white);
+  }
+
   @media(min-width: $lg) {
     &[data-header="scroll"] &__logo {
       width: 100px;
     }
   }
 
-  @media(max-width: $md) {
-    &__btn {
-      height: 46px;
+  @media(min-width: $xl) {
+    &__logo {
+      margin-left: 90px;
     }
   }
 }
