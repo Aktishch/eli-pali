@@ -9,6 +9,25 @@
     transform: rotate(-6deg);
   }
 
+  &__light {
+    mix-blend-mode: hard-light;
+    animation: 3s events linear infinite both;
+  }
+
+  &__fade {
+    mix-blend-mode: luminosity;
+  }
+
+  &__blur-red {
+    left: auto;
+    right: -70%;
+    top: 20%;
+  }
+
+  &__pack {
+    max-width: 1560px;
+  }
+
   &__blur {
     width: 54px;
     height: 54px;
@@ -18,9 +37,32 @@
     transform: translateX(-50%);
   }
 
+  &__bg {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 670px;
+      background: linear-gradient(180deg, rgba(5, 1, 2, 0.00) 0%, #050102 63.87%);
+    }
+  }
+
   @media(max-width: $xl) {
     & {
       min-height: 1100px;
+    }
+
+    &__bg {
+      &::after {
+        height: 300px;
+      }
+    }
+
+    &__pack {
+      max-width: 1000px;
     }
   }
 
@@ -28,12 +70,22 @@
     & {
       min-height: 900px;
     }
+
+    &__pack {
+      max-width: 750px;
+    }
   }
 
   @media(max-width: $md) {
     & {
       min-height : 800px;
       padding-top: 130px;
+    }
+
+    &__bg {
+      &::after {
+        height: 130px;
+      }
     }
   }
 
@@ -192,6 +244,7 @@
 
     &__pack {
       max-width    : 100%;
+      min-width: 450px;
       margin-left  : 0;
       margin-bottom: -100px;
     }
@@ -545,10 +598,6 @@
       --team-bg: var(--color-primary-30);
     }
 
-    &--green {
-      --team-bg: var(--color-green-30);
-    }
-
     &--purple {
       --team-bg: var(--color-purple-30);
     }
@@ -571,6 +620,7 @@
   }
 
   &__info {
+    max-width: 310px;
     border-radius   : 100px;
     height          : 46px;
     background-color: var(--team-color);
@@ -616,6 +666,10 @@
 
     &__person {
       max-width: 370px;
+    }
+
+    &__pack {
+      height: 420px;
     }
 
     &__bg {
@@ -674,10 +728,6 @@
     }
   }
 
-  &__pack {
-    max-width: 1100px;
-  }
-
   &__feedback {
     background     : radial-gradient(98.48% 326.98% at 0% 3.35%, #282828 0%, rgba(28, 28, 28, 0.8) 100%);
     backdrop-filter: blur(15px);
@@ -692,6 +742,11 @@
   @media(min-width: $lg) {
     &__feedback {
       max-width: 500px;
+    }
+
+    &__pack {
+      max-width: 1100px;
+      right: -350px;
     }
   }
 
@@ -727,7 +782,7 @@
 
     &__bg {
       position: static;
-      margin  : -70px -15px 0 -45px;
+      margin-inline: -15px;
     }
 
     &__pack {

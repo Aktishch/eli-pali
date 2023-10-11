@@ -10,9 +10,22 @@
 <!-- Главный блок -->
 
 <main class="main container relative overflow-hidden">
-  <div class="blur absolute bg-brown zi-1"></div>
+  <div class="blur absolute bg-brown"></div>
+  <div class="main__blur-red blur absolute bg-red d-none d-lg-block"></div>
   <div class="main__bg bg-block">
-    <div class="pack h-100">
+    <div class="main__fade pack bg-block">
+      <picture>
+        <source srcset="img/pictures/main-fade.webp" type="image/webp">
+        <img class="image" src="img/pictures/main-fade.png" alt="">
+      </picture>
+    </div>
+    <div class="main__light pack bg-block">
+      <picture>
+        <source srcset="img/pictures/main-light.webp" type="image/webp">
+        <img class="image" src="img/pictures/main-light.png" alt="">
+      </picture>
+    </div>
+    <div class="main__pack pack w-100 h-100 mx-auto">
       <picture>
         <source srcset="img/pictures/group.webp" type="image/webp">
         <img class="image image--sd image--b" src="img/pictures/group.png" alt="">
@@ -23,7 +36,7 @@
     <h1 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-3 mb-md-5 md-lg-10 ease duration-5 anim anim--up" data-anim="hidden">
       Кавер-группа <br> для вашего мероприятия
     </h1>
-    <h3 class="font-alt color-primary text text--center text--uppercase text-24 text-md-38 text-lg-46 bold-9 mb-5 mb-md-10 ease delay-2 anim anim--up" data-anim="hidden">От 50 000 ₽</h3>
+    <!-- <h3 class="font-alt color-primary text text--center text--uppercase text-24 text-md-38 text-lg-46 bold-9 mb-5 mb-md-10 ease delay-2 anim anim--up" data-anim="hidden">От 50 000 ₽</h3> -->
     <div class="duration-6 delay-4 anim anim--circle" data-anim="hidden">
       <div class="main__info flex align-center justify-center relative overflow-hidden w-max py-2 py-md-4 px-5 px-md-8 mx-auto">
         <div class="main__blur bg-red absolute"></div>
@@ -541,54 +554,53 @@
 
 <% var team = [
   {
+    col: 'col-6',
     img: '1',
-    name: 'михаил',
+    name: 'Алексей',
     text: 'Главный на бас-гитаре',
     bg: 'primary',
     color: 'text'
   },
   {
+    col: 'col-6',
     img: '2',
-    name: 'михаил',
-    text: 'Виртуоз на гитаре вокале',
-    bg: 'green',
-    color: 'text'
-  },
-  {
-    img: '3',
-    name: 'михаил',
+    name: 'ДМИТРИЙ',
     text: 'Родился с бас-гитарой в руках',
     bg: 'purple',
     color: 'white'
   },
   {
-    img: '4',
-    name: 'михаил',
+    col: 'col-12',
+    img: '3',
+    name: 'ПАВЕЛ',
     text: 'Поёт как соловей',
     bg: 'sky',
     color: 'text'
   },
   {
-    img: '5',
-    name: 'михаил',
+    col: 'col-4',
+    img: '4',
+    name: 'СЕРГЕЙ',
     text: 'Соседи (больше) не жалуются',
     bg: 'red',
     color: 'white'
   },
   {
-    img: '6',
-    name: 'михаил',
+    col: 'col-4',
+    img: '5',
+    name: 'александр',
     text: 'Любит дуть и всем это нравится',
     bg: 'akva',
     color: 'text'
   },
   {
-    img: '7',
-    name: 'михаил',
+    col: 'col-4',
+    img: '6',
+    name: 'александр',
     text: 'Человек с железными легкими',
     bg: 'blue',
     color: 'white'
-  }
+  },
 ] %>
 
 <section class="team container bg-white overflow-hidden" id="team">
@@ -605,9 +617,9 @@
     <div class="swiper swiper--overwrap">
       <div class="team-wrapper swiper-wrapper d-flex d-lg-grid grid gap-lg-8">
         <% for (var i = 0; i < team.length; i++) { %>
-          <div class="swiper-slide <%= i == 3 ? 'col-12' : 'col-4' %>">
+          <div class="swiper-slide <%= team[i].col %>">
             <div class="team__card card flex-row align-center color-white ease-in-out duration-4 anim anim--up" data-anim="hidden">
-              <div class="team__person relative w-100">
+              <div class="<%= i == 2 ? 'team__person' : '' %> relative w-100">
                 <div class="team__pack pack pack--photo bg-text w-100">
                   <div class="loader">
                     <span class="loader-progress">
@@ -618,7 +630,7 @@
                   </div>
                   <picture>
                     <source srcset="img/pictures/person-<%= team[i].img %>.webp" type="image/webp">
-                    <img class="image <%= i == 3 ? 'image--br' : '' %>" loading="lazy" src="img/pictures/person-<%= team[i].img %>.jpg" alt="">
+                    <img class="image image--sd <%= i == 2 ? 'image--br' : '' %>" loading="lazy" src="img/pictures/person-<%= team[i].img %>.png" alt="">
                   </picture>
                 </div>
                 <div class="team__bg team__bg--<%= team[i].bg %> bg-block zi-1 flex flex-column align-center justify-center py-4 px-5 py-md-8 px-md-8">
@@ -626,7 +638,7 @@
                   <div class="team__info team__info--<%= team[i].bg %> flex align-center justify-center relative color-<%= team[i].color %> text text--center text-14 text-md-16 bold-6 w-100 px-4"><%= team[i].text %></div>
                 </div>
               </div>
-              <% if (i == 3) { %>
+              <% if (i == 2) { %>
                 <div class="team__content card-content d-none d-lg-flex relative pl-10 pr-5">
                   <div class="team__logo absolute text-46">
                     <span class="color-white fade-10 zoom-4">
@@ -789,7 +801,7 @@
       </div>
       <picture>
         <source srcset="img/pictures/feedback.webp" type="image/webp">
-        <img class="image image--sd image--br" loading="lazy" src="img/pictures/feedback.png" alt="">
+        <img class="image image--br" loading="lazy" src="img/pictures/feedback.png" alt="">
       </picture>
     </div>
   </div>
