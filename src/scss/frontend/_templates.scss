@@ -1,3 +1,18 @@
+// Новогодняя тема
+html {
+  &:not(.theme-new-year) {
+    & .theme-new-year-item {
+      display: none;
+    }
+  }
+
+  &.theme-new-year {
+    & .theme-new-year-hidden {
+      display: none;
+    }
+  }
+}
+
 // Логотип
 .logo {
   width: 160px;

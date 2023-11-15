@@ -15,6 +15,7 @@ import formSubmit from './ts/form-submit'
 import inputs from './ts/inputs'
 import maskTel from './ts/mask-tel'
 import quiz from './ts/quiz'
+import themeNewYear from './ts/theme-new-year'
 
 // Style
 import './scss/index.scss'
@@ -36,5 +37,6 @@ window.addEventListener('DOMContentLoaded', () => {
   inputs.init()
   maskTel.init()
   quiz.init()
+  themeNewYear.init()
 
 })
