@@ -1,6 +1,6 @@
 // Главный блок
 .main {
-  min-height : 1450px;
+  min-height : 1080px;
   padding-top: 215px;
 
   &__info {
@@ -46,13 +46,82 @@
       right: 0;
       width: 100%;
       height: 670px;
-      background: linear-gradient(180deg, rgba(5, 1, 2, 0.00) 0%, #050102 63.87%);
+      background: linear-gradient(180deg, rgba(5, 1, 2, 0.00) 0%, #050102 96.87%);
+    }
+  }
+
+  &__banner {
+    margin-top: 220px;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.2) 100%);
+    border: 1px solid #FFFFFF33;
+    box-shadow: 0 4px 40px 0 #C36D2E33;
+    backdrop-filter : blur(30px);
+    max-width: 1024px;
+  }
+
+  &__picture {
+    max-width: 344px;
+  }
+
+  &__gradient {
+    inset: 0;
+    background-color: var(--color-black-50);
+  }
+
+  &__play {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__fire {
+    animation: fire 3s linear infinite;
+  }
+
+  &__circle {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+  }
+
+  &__burger {
+    left : 20%;
+    bottom: 100px;
+
+    & .icon {
+      animation: parallax 3s linear infinite;
+    }
+  }
+
+  &__tree-red {
+    left : 30%;
+    bottom: 50%;
+
+    & .icon {
+      animation: parallax 3s linear infinite;
+    }
+  }
+
+  &__star {
+    right : 40%;
+    top: 40%;
+
+    & .icon {
+      animation: parallax 3s linear infinite;
+    }
+  }
+
+  &__tree-yellow {
+    right : 20%;
+    bottom: 300px;
+
+    & .icon {
+      animation: parallax 3s linear infinite;
     }
   }
 
   @media(max-width: $xl) {
     & {
-      min-height: 1100px;
+      min-height: 900px;
     }
 
     &__bg {
@@ -64,11 +133,15 @@
     &__pack {
       max-width: 1000px;
     }
+
+    &__banner {
+      margin-top: 120px;
+    }
   }
 
   @media(max-width: $lg) {
     & {
-      min-height: 900px;
+      min-height: 700px;
     }
 
     &__pack {
@@ -78,7 +151,6 @@
 
   @media(max-width: $md) {
     & {
-      min-height : 800px;
       padding-top: 130px;
     }
 
@@ -87,11 +159,21 @@
         height: 130px;
       }
     }
+
+    &__banner {
+      margin-top: 60px;
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   @media(max-width: $sm) {
     & {
       min-height: 560px;
+    }
+
+    &__picture {
+      max-width: 100%;
     }
   }
 
@@ -105,7 +187,7 @@
 
 // Квиз
 .quiz {
-  margin-top: -360px;
+  margin-top: -100px;
 
   &__form {
     background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, rgba(40, 40, 40, 0.8) 0%, rgba(28, 28, 28, 0.4) 100%);
@@ -155,7 +237,7 @@
 
   @media(max-width: $xl) {
     & {
-      margin-top: -150px;
+      margin-top: 0;
     }
 
     &-images {
@@ -167,10 +249,6 @@
     &-slider {
       max-width: 100%;
     }
-  }
-
-  @media(max-width: $lg) {
-    margin-top: 0;
   }
 }
 

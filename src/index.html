@@ -13,7 +13,7 @@
   <div class="blur absolute bg-brown"></div>
   <div class="main__blur-red blur absolute bg-red d-none d-lg-block"></div>
   <div class="main__bg bg-block">
-    <div class="main__fade pack bg-block">
+    <!-- <div class="main__fade pack bg-block">
       <picture>
         <source srcset="img/pictures/main-fade.webp" type="image/webp">
         <img class="image" src="img/pictures/main-fade.png" alt="">
@@ -30,20 +30,82 @@
         <source srcset="img/pictures/group.webp" type="image/webp">
         <img class="image image--sd image--b" src="img/pictures/group.png" alt="">
       </picture>
+    </div> -->
+    <div class="pack w-100 h-100">
+      <picture>
+        <source srcset="img/pictures/solo.webp" type="image/webp">
+        <img class="image" src="img/pictures/solo.png" alt="">
+      </picture>
+    </div>
+    <div class="main__burger parallax-bottom d-none d-md-block absolute zi-1 color-green text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="5">
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#tree">
+      </svg>
+    </div>
+    <div class="main__tree-red parallax-top d-none d-md-block absolute zi-1 color-red text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="5">
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#tree">
+      </svg>
+    </div>
+    <div class="main__star parallax-bottom d-none d-md-block absolute zi-1 color-primary text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="5">
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#star">
+      </svg>
+    </div>
+    <div class="main__tree-yellow parallax-top d-none d-md-block absolute zi-1 color-yellow text-28 text-md-42 pointer-none linear duration-2" data-parallax="scroll" data-parallax-depth="5">
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#tree">
+      </svg>
     </div>
   </div>
   <div class="relative color-white zi-2">
-    <h1 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-3 mb-md-5 md-lg-10 ease duration-5 anim anim--up" data-anim="hidden">
+    <h1 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 ease duration-5 anim anim--up" data-anim="hidden">
       Кавер-группа <br> для вашего мероприятия
     </h1>
     <!-- <h3 class="font-alt color-primary text text--center text--uppercase text-24 text-md-38 text-lg-46 bold-9 mb-5 mb-md-10 ease delay-2 anim anim--up" data-anim="hidden">От 50 000 ₽</h3> -->
-    <div class="duration-6 delay-4 anim anim--circle" data-anim="hidden">
+    <!-- <div class="duration-6 delay-4 anim anim--circle" data-anim="hidden">
       <div class="main__info flex align-center justify-center relative overflow-hidden w-max py-2 py-md-4 px-5 px-md-8 mx-auto">
         <div class="main__blur bg-red absolute"></div>
         <img class="icon relative text-32 mr-2" src="img/pictures/accordion.svg" alt="">
         <div class="relative font-alt text-14 text-md-16 bold-7">
           <span class="color-green">+ 2 песни</span> в подарок!
         </div>
+      </div>
+    </div> -->
+    <div class="main__banner flex align-center gap-5 gap-md-10 radius-6 p-4 w-100 mx-auto">
+      <a class="main__picture pack pack--rect radius-6 bg-grey w-100" data-scroll="top" href="#clips">
+        <div class="loader">
+          <span class="loader-progress">
+            <svg class="loader-icon icon">
+              <use xlink:href="img/icons.svg#loader">
+            </svg>
+          </span>
+        </div>
+        <picture>
+          <source srcset="img/pictures/solo.webp" type="image/webp">
+          <img class="image" loading="lazy" src="img/pictures/solo.jpg" alt="">
+        </picture>
+        <div class="main__gradient absolute flex align-center justify-center">
+          <span class="main__play btn btn--primary btn--light text-44 radius-max pointer-all" data-waved>
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#play">
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div class="main__content color-white">
+        <h4 class="font-alt text text-20 text-md-24 text--uppercase bold-9 mb-3">
+          посмотрите, как мы за<span class="color-primary">ж</span>  <img class="main__fire icon d-inline" src="img/pictures/fire.svg" alt=""> <span class="color-primary">ж</span>игаем!
+        </h4>
+        <p class="text-14 bold-4 mb-8">Готовы выступить на любых ваших мероприятиях!</p>
+        <a class="btn btn--primary btn--lg btn--fill w-max color-black" data-scroll="top" href="#clips">
+          <span class="main__circle bg-white color-primary flex align-center justify-center radius-max mr-2">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#play">
+            </svg>
+          </span>
+          Смотреть видео
+        </a>
       </div>
     </div>
   </div>
@@ -433,7 +495,7 @@
 
 <% var clips = ['1', '2', '1', '2', '1', '2'] %>
 
-<section class="clips container gradient gradient--light bg-white overflow-hidden px-4 pt-0">
+<section class="clips container gradient gradient--light bg-white overflow-hidden px-4 pt-0" id="clips">
   <h2 class="font-alt text text--center text--uppercase text-26 text-md-40 text-lg-52 bold-9 lh-5 mb-8 mb-lg-10 ease duration-4 anim anim--up" data-anim="hidden">как мы это делаем</h2>
   <div class="clips-slider relative w-100 mx-auto">
     <div class="swiper swiper--overwrap">
