@@ -169,7 +169,7 @@
 
   @media(max-width: $sm) {
     & {
-      min-height: 560px;
+      min-height: 980px;
     }
 
     &__picture {
@@ -248,6 +248,12 @@
   @media(max-width: $lg) {
     &-slider {
       max-width: 100%;
+    }
+  }
+
+  @media(max-width: $sm) {
+    & {
+      margin-top: -150px;
     }
   }
 }
